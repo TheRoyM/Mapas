@@ -5,7 +5,7 @@ import co.edu.unac.poo1.unidad3.Unidad3;
 import java.util.Scanner;
 
 public class Unidad1 {
-    private static final int MAXIMA_OPCION_MENU = 6;
+    private static final int MAXIMA_OPCION_MENU = 7;
     public static void menuPrincipal() {
         int opcionMenu;
         Scanner entrada = new Scanner(System.in);
@@ -19,6 +19,7 @@ public class Unidad1 {
             System.out.println("3. Mapas ordenados :)");
             System.out.println("4. Mapas con hasmap");
             System.out.println("5. Añadir dato Mapa");
+            System.out.println("6. Añadir dato Mapa a lista");
 
             System.out.println(MAXIMA_OPCION_MENU + ". Salir de la aplicacion");
             opcionMenu = entrada.nextInt();
@@ -29,6 +30,7 @@ public class Unidad1 {
                 case 3 -> Unidad3.relojsOrdenados();
                 case 4 -> Unidad3.ordenarListaHasmap();
                 case 5 -> Unidad3.elementodeListaaMap();
+                case 6 -> Unidad3.demapaAlista();
                 case MAXIMA_OPCION_MENU -> System.out.println("Hasta pronto");
                 default -> System.err.println("ERROR: Opcion invalida");
             }

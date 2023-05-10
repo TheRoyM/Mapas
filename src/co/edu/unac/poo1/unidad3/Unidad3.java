@@ -94,4 +94,25 @@ public class Unidad3 {
     }
 
 
+    //punto 1, pasar un elemnto de un mapa a lista
+    public static void demapaAlista(){
+        Map<String, RelojPulso> mapaRelojs = new HashMap<>();
+        for (RelojPulso relojPulso : obtenerListaRelojs()) {
+            mapaRelojs.put(relojPulso.getMarca(), relojPulso);
+            System.out.println(relojPulso);
+        }
+        List<RelojPulso> listClock = new ArrayList<>();
+        String busqueda = "qwfe q";
+        if (mapaRelojs.containsKey(busqueda)){
+            listClock.add(mapaRelojs.get(busqueda));
+        }else {
+            System.out.println("No encontrado");
+        }
+        System.out.println("Relojs encontrados y añadido a su nueva lista ");
+        for (RelojPulso relojPulso : listClock){
+            System.out.println(relojPulso);
+        }
+    }
+
+
 }
